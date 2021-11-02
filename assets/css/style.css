@@ -8,12 +8,28 @@
     border: none;
 }
 
+/* footer control using css-grid */
+html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
     background-color: #000;
     font-family: 'VT323', monospace;
+    width: 100%;
+    height: 100%;
+}
+
+#container {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
 }
 
 #main-header {
+  margin-top: ;
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
   text-align: center;
@@ -35,22 +51,28 @@ body {
 #bkgrd-video {
     z-index: -3;
     position: fixed;
-    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center center; */
+    /* left: 0; */
     bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    /* max-width: auto; */
+    max-height: 100%;
 }
 
 /* main page styling */
 
 #start-screen {
-  max-width: 600px;
-  max-height: 600px;
+  width: 400px;
+  height: 400px;
   margin: auto;
-  color: greenyellow;
+  background-color: greenyellow;
 }
 
 #user-input input {
+  display: block;
+  margin: auto;
+  width: 40%;
   max-width: 500px;
   text-align: center;
   padding: 0.5rem;
@@ -60,11 +82,11 @@ body {
 .button {
   border: 1px solid greenyellow;
   color: #000;
+  width: 40%;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
+  margin: auto;
   font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
 }
