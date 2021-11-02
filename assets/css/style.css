@@ -17,6 +17,7 @@ html {
 body {
     background-color: #000;
     font-family: 'VT323', monospace;
+    text-align: center;
     width: 100%;
     height: 100%;
 }
@@ -29,15 +30,14 @@ body {
 }
 
 #main-header {
-  margin-top: ;
+  margin-top: 1rem;
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  text-align: center;
   color: #fff;
 }
 
 #subheader {
-  text-align: center;
+  margin: 0.5rem 0 0.5rem;
   font-size: 2rem;
   color: #fff;
 }
@@ -46,47 +46,83 @@ body {
     text-decoration: none;
 } */
 
-/* page background video - modified code from https://www.w3schools.com/howto/howto_css_fullscreen_video.asp */
+/* page background video - modified code from https://w3collective.com/fullscreen-video-background/ */
 
-#bkgrd-video {
-    z-index: -3;
-    position: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* background-position: center center; */
-    /* left: 0; */
-    bottom: 0;
-    /* max-width: auto; */
-    max-height: 100%;
+video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
 }
 
 /* main page styling */
 
 #start-screen {
+  border: 3px solid greenyellow;
   width: 400px;
   height: 400px;
   margin: auto;
-  background-color: greenyellow;
+  background-color: #191970;
 }
 
 #user-input input {
   display: block;
-  margin: auto;
-  width: 40%;
-  max-width: 500px;
+  margin: 0.5rem auto 0;
+  width: 33%;
+  min-width: 300px;
+  height: 2rem;
+  font-size: 1.25rem;
   text-align: center;
-  padding: 0.5rem;
-  color: #fff;
+  padding: auto;
+  color: #191970;
 }
 
 .button {
-  border: 1px solid greenyellow;
-  color: #000;
-  width: 40%;
-  padding: 15px 32px;
-  text-align: center;
+  border: 3px solid greenyellow;
+  border-radius: 5px;
+  color: #191970;
+  width: 33%;
+  height: 2.5rem;
+  padding: auto;
   text-decoration: none;
   display: block;
-  margin: auto;
-  font-size: 16px;
+  margin: 0.5rem auto;
+  font-size: 1.75rem;
+  font-family: 'VT323', monospace;
+}
+
+#start-button:hover {
+  background-color: #191970;
+  color: greenyellow;
+}
+
+/* footer styling */
+
+#foot-div {
+  height: 2rem;
+  background-color: #191970;
+}
+
+#foot-copy {
+  color: #fff;
+  padding: 0.5rem 0;
+}
+
+#credits:hover {
+  color: greenyellow;
+}
+
+/* media query for screen width 768px and below */
+
+@media screen and (max-width: 768px) {
+  #user-input input {
+    width: 300px;
+  }
+  
+  .button {
+    width: 300px;
+  }
 }

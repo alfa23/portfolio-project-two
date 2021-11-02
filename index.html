@@ -18,7 +18,7 @@
 <body>
 
   <!-- website-wide page background video -->
-  <video id="bkgrd-video" autoplay muted loop>
+  <video poster="assets/videos/neontrack14092020_poster.jpg" autoplay playsinline muted loop>
     <source src="assets/videos/neontrack14092020.mp4" type="video/mp4">
   </video>
 
@@ -39,19 +39,15 @@
       <!-- user inputs section with text input & feedback/start buttons -->
       <div id="user-input">
         <input type="text" placeholder="Hit NERD IT to play!">
-      </div>
-      <div id="fback-button">
-        <button type="button" class="button" disabled>Feedback</button>
-      </div>
-      <div id="start-button">
-        <button type="button" class="button">NERD IT</button>
+        <button type="button" class="button" id="fback-button" disabled>Feedback</button>
+        <button type="button" class="button"  id="start-button">NERD IT</button>
       </div>
     </main>
 
     <!-- footer section providing image credit information -->
     <footer>
       <div id="foot-div">
-        <h3 id="foot-copy">FOOTER PLACEHOLDER TEXT</h3>
+        <h3 id="foot-copy"><span id="credits">IMAGE CREDITS</span></h3>
       </div>
     </footer>
   </div>
