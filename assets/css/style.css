@@ -129,7 +129,47 @@ video {
   color: #00ffff;
 }
 
-/* media query for screen width 950px and below */
+/* modal box for footer/image credits learnt, borrowed and adapted css-grid code from: https://www.w3schools.com/howto/howto_css_modals.asp */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #00ffff;
+  width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #191970;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* media query scaling user-inputs for screen width 950px and below */
 
 @media screen and (max-width: 950px) {
   #user-input input {
@@ -141,7 +181,7 @@ video {
   }
 }
 
-/* media query for screen width 550px and below */
+/* media query scaling headers & '*-screen' elements for screen width 550px and below */
 
 @media screen and (max-width: 550px) {
   #main-header {
@@ -158,13 +198,5 @@ video {
     width: 300px;
     height: 300px;
     font-size: 1.5rem;
-  }
-  
-  #user-input input {
-    width: 300px;
-  }
-  
-  .button {
-    width: 300px;
   }
 }
