@@ -63,7 +63,7 @@ video {
 
 /* main start-panel styling */
 #start-panel {
-  display: block;
+  display: none;
 }
 
 #start-screen {
@@ -79,6 +79,25 @@ video {
 #start-screen span {
   color: #00ffff;
   text-shadow: 0px 0px 16px #fff;
+}
+
+/* main game-panel styling */
+#game-panel {
+  display: block;
+}
+
+#game-screen {
+  border: 3px solid #00ffff;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  background-color: #191970;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+#game-screen img {
+  max-width: 100%;
 }
 
 /* user-input styling */
@@ -108,7 +127,7 @@ video {
   font-family: 'VT323', monospace;
 }
 
-#start-button:hover {
+#start-button:hover, #submit-button:hover, #pass-button:hover {
   background-color: #191970;
   color: #00ffff;
 }
@@ -194,9 +213,17 @@ video {
     font-size: 1.5rem;
   }
   
-  #start-screen {
+  #start-screen, #game-screen {
     width: 300px;
     height: 300px;
     font-size: 1.5rem;
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #00ffff;
+    width: 80%; /* Could be more or less, depending on screen size */
   }
 }

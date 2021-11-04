@@ -38,7 +38,7 @@
         <h2>How <span>BIG</span> a</h2>
         <h2><span>NERD</span> are <span>YOU</span>..?</h2>
         <br>
-        <p>Complete <span>12 rounds</span> to</p>
+        <p>Complete <span>10 rounds</span> to</p>
         <p><span>RANK</span> your <span>NERDINESS</span>!</p>
         <br>
         <p>Your <span>MISSION</span> is to</p>
@@ -47,12 +47,27 @@
         <br>
         <h3><span>READY?</span></h3>
       </div>
-
+    
       <!-- user inputs section with text input & feedback/start buttons -->
       <div id="user-input">
-        <input type="text" placeholder="Hit NERD IT to play!">
-        <button type="button" class="button" id="start-button">NERD IT</button>
-        <button type="button" class="button" id="fback-button" disabled>Feedback</button>
+        <input type="text" id="answer-box" placeholder="Hit NERD IT to play!" disabled>
+        <button data-type="start" class="button" id="start-button">NERD IT</button>
+        <button data-type="fback" class="button" id="fback-button" disabled>FEEDBACK</button>
+      </div>
+    </main>
+
+    <!-- page elements for main-2 game panel -->
+    <main id="game-panel">
+      <!-- start screen section -->
+      <div id="game-screen">
+        <img src="*" alt="It's a game, that would be telling!">
+      </div>
+
+      <!-- user inputs section with text input & pass/submit buttons -->
+      <div id="user-input">
+        <input type="text" id="answer-box" placeholder="Type your answer here">
+        <button data-type="submit" class="button" id="submit-button">SUBMIT</button>
+        <button data-type="pass" class="button" id="pass-button">PASS/NEXT</button>
       </div>
     </main>
 
