@@ -63,7 +63,7 @@ video {
 
 /* main start-panel styling */
 #start-panel {
-  display: none;
+  display: block;
 }
 
 #start-screen {
@@ -102,17 +102,65 @@ video {
 
 /* main score-panel styling */
 #score-panel {
-  display: block;
+  display: none;
 }
 
 #score-screen {
   border: 3px solid #00ffff;
   width: 400px;
   height: 400px;
+  box-sizing: border-box;
+  padding-top: 4rem;
   margin: auto;
   background-color: #191970;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+/* main fback-panel styling */
+#fback-panel {
+  display: none;
+}
+
+#fback-screen {
+  border: 3px solid #00ffff;
+  width: 400px;
+  height: 400px;
+  box-sizing: border-box;
+  padding-top: 0.5rem;
+  margin: auto;
+  background-color: #191970;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+/* fback - form and form button styling */
+
+form {
+  width: 100%;
+  padding-bottom: 15%;
+  color: #fff;
+}
+
+form input {
+  width: 80%;
+  padding: 0.3rem;
+  margin: 0.5rem;
+}
+
+#form-submit {
+  background-color: #191970;
+  color: #00ffff;
+  font-family: 'Press Start 2P', cursive;
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #fff;
+  border-radius: 0.5rem;
+}
+
+#form-submit:hover {
+  background-color: #00ffff;
+  color: #191970;
 }
 
 /* user-input styling */
@@ -142,7 +190,7 @@ video {
   font-family: 'VT323', monospace;
 }
 
-#start-button:hover, #submit-button:hover, #pass-button:hover, #fback-button:hover {
+#start-button:hover, #submit-answer-button:hover, #pass-button:hover, #fback-button:hover {
   background-color: #191970;
   color: #00ffff;
 }
@@ -232,6 +280,29 @@ video {
     width: 300px;
     height: 300px;
     font-size: 1.5rem;
+  }
+
+  #score-screen {
+    padding-top: 2rem;
+  }
+
+  #fback-screen {
+    width: 300px;
+    height: 300px;
+    padding-top: 0.25rem;
+    font-size: 0.9rem;
+  }
+
+  form input {
+    padding: 0.2rem;
+    margin: 0.3rem;
+  }
+  
+  #form-submit {
+    padding: 0.2rem 1rem;
+    font-size: 0.75rem;
+    border: 2px solid #fff;
+    border-radius: 0.5rem;
   }
 
   .modal-content {
