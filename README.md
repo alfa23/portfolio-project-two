@@ -14,4 +14,4 @@
 
 • **Consistent footer** behaviour controlled using learnt, borrowed and adapted css-grid code from: https://dev.to/niorad/keeping-the-footer-at-the-bottom-with-css-grid-15mf
 
-• **page background video** modified code from https://w3collective.com/fullscreen-video-background/ */
+• **page background video** modified code from https://w3collective.com/fullscreen-video-background/

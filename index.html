@@ -22,7 +22,7 @@
     <source src="assets/videos/neontrack14092020.mp4" type="video/mp4">
   </video>
 
-  <!-- footer control div -->
+  <!-- consistent footer behaviour controlled using learnt, borrowed and adapted css-grid code from: https://dev.to/niorad/keeping-the-footer-at-the-bottom-with-css-grid-15mf -->
   <div id="container">
 
     <!-- header section with dynamic subheader -->
@@ -32,19 +32,31 @@
     </header>
 
     <!-- main page elements -->
-    <main>
+    <main id="start-panel">
       <!-- start screen section -->
-      <div id="start-screen"></div>
+      <div id="start-screen">
+        <h2>How <span>BIG</span> a</h2>
+        <h2><span>NERD</span> are <span>YOU</span>..?</h2>
+        <br>
+        <p>Complete <span>12 rounds</span> to</p>
+        <p><span>RANK</span> your <span>NERDINESS</span>!</p>
+        <br>
+        <p>Your <span>MISSION</span> is to</p>
+        <p>name the <span>FANDOM</span> that each</p>
+        <p>of the <span>LOGOS</span> belongs to...</p>
+        <br>
+        <h3><span>READY?</span></h3>
+      </div>
 
       <!-- user inputs section with text input & feedback/start buttons -->
       <div id="user-input">
         <input type="text" placeholder="Hit NERD IT to play!">
-        <button type="button" class="button" id="fback-button" disabled>Feedback</button>
         <button type="button" class="button"  id="start-button">NERD IT</button>
+        <button type="button" class="button" id="fback-button" disabled>Feedback</button>
       </div>
     </main>
 
-    <!-- footer section providing image credit information -->
+    <!-- footer section providing image credits information -->
     <footer>
       <div id="foot-div">
         <h3 id="foot-copy"><span id="credits">IMAGE CREDITS</span></h3>
