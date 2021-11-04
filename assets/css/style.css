@@ -83,7 +83,7 @@ video {
 
 /* main game-panel styling */
 #game-panel {
-  display: block;
+  display: none;
 }
 
 #game-screen {
@@ -98,6 +98,21 @@ video {
 
 #game-screen img {
   max-width: 100%;
+}
+
+/* main score-panel styling */
+#score-panel {
+  display: block;
+}
+
+#score-screen {
+  border: 3px solid #00ffff;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  background-color: #191970;
+  color: #fff;
+  font-size: 2rem;
 }
 
 /* user-input styling */
@@ -127,7 +142,7 @@ video {
   font-family: 'VT323', monospace;
 }
 
-#start-button:hover, #submit-button:hover, #pass-button:hover {
+#start-button:hover, #submit-button:hover, #pass-button:hover, #fback-button:hover {
   background-color: #191970;
   color: #00ffff;
 }
@@ -213,7 +228,7 @@ video {
     font-size: 1.5rem;
   }
   
-  #start-screen, #game-screen {
+  #start-screen, #game-screen, #score-screen {
     width: 300px;
     height: 300px;
     font-size: 1.5rem;

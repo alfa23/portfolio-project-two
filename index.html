@@ -52,13 +52,13 @@
       <div id="user-input">
         <input type="text" id="answer-box" placeholder="Hit NERD IT to play!" disabled>
         <button data-type="start" class="button" id="start-button">NERD IT</button>
-        <button data-type="fback" class="button" id="fback-button" disabled>FEEDBACK</button>
+        <button data-type="fback" class="button" id="disabled-button" disabled>FEEDBACK</button>
       </div>
     </main>
 
     <!-- page elements for main-2 game panel -->
     <main id="game-panel">
-      <!-- start screen section -->
+      <!-- game screen section -->
       <div id="game-screen">
         <img src="*" alt="It's a game, that would be telling!">
       </div>
@@ -68,6 +68,28 @@
         <input type="text" id="answer-box" placeholder="Type your answer here">
         <button data-type="submit" class="button" id="submit-button">SUBMIT</button>
         <button data-type="pass" class="button" id="pass-button">PASS/NEXT</button>
+      </div>
+    </main>
+
+    <!-- page elements for main-3 score panel -->
+    <main id="score-panel">
+      <!-- score screen section -->
+      <div id="score-screen">
+        <br>
+        <br>
+        <h2><span>WELL DONE!</span></h2>
+        <br>
+        <h2><span id="score-html">score inner html</span></h2>
+        <br>
+        <h3>Your rank:</h3>
+        <h2><span id="rank-html">rank inner html</span></h2>
+      </div>
+
+      <!-- user inputs section with text input & pass/submit buttons -->
+      <div id="user-input">
+        <input type="text" id="answer-box" placeholder="Thanks for playing! Try again?">
+        <button data-type="start" class="button" id="start-button">PLAY AGAIN</button>
+        <button data-type="fback" class="button" id="fback-button">FEEDBACK</button>
       </div>
     </main>
 
