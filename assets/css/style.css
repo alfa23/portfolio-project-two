@@ -172,7 +172,7 @@ form input {
   height: 2rem;
   font-size: 1.25rem;
   text-align: center;
-  padding: auto;
+  padding: 1px;
   color: #191970;
 }
 
@@ -182,7 +182,7 @@ form input {
   color: #191970;
   width: 33%;
   height: 2.5rem;
-  padding: auto;
+  padding: 1px;
   text-decoration: none;
   display: block;
   margin: 0.5rem auto;
