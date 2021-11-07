@@ -1,3 +1,49 @@
+// Declare array of key:values containing information for nerdOmeter tests
+
+let icons = [{
+    iconName: 'nOm_01.jpg',
+    answer: 'Assassins Creed'
+  },
+  {
+    iconName: 'nOm_02.jpg',
+    answer: 'The Avengers'
+  },
+  {
+    iconName: 'nOm_03.jpg',
+    answer: 'Batman'
+  },
+  {
+    iconName: 'nOm_04.jpg',
+    answer: 'Game of Thrones'
+  },
+  {
+    iconName: 'nOm_05.jpg',
+    answer: 'Ghostbusters'
+  },
+  {
+    iconName: 'nOm_06.jpg',
+    answer: 'Green Lantern'
+  },
+  {
+    iconName: 'nOm_07.jpg',
+    answer: 'Hunger Games'
+  },
+  {
+    iconName: 'nOm_08.jpg',
+    answer: 'Jurassic Park'
+  },
+  {
+    iconName: 'nOm_09.jpg',
+    answer: 'The Legend of Zelda'
+  },
+  {
+    iconName: 'nOm_10.jpg',
+    answer: 'The Lord of the Rings'
+  },
+]
+
+console.log(icons)
+
 // Wait for the DOM to finish loading before running
 
 // Start-panel script
@@ -11,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener('click', function () {
       if (this.getAttribute('data-type') === 'start') {
         document.getElementById('start-panel').style.display = 'none';
-        document.getElementById('game-panel').style.display = 'block'
+        document.getElementById('game-panel').style.display = 'block';
       }
     })
   }
@@ -39,9 +85,30 @@ document.addEventListener("DOMContentLoaded", function () {
         checkAnswer();
       }
     })
+    setTest();
   }
 })
 
+function setTest() {
+  // Changes header subhead element copy to test question
+  document.getElementById('subheader').innerHTML = 'What is this logo from?';
+  // Generate array of 5 (# of icons in test) unique random numbers between 1-10 (upper limit should equal max test icons (total # of objects in icons array))
+  let testIcons = [];
+  while (testIcons.length < 5) {
+    let t = Math.floor(Math.random() * 10);
+    if (testIcons.indexOf(t) === -1) testIcons.push(t);
+
+    function runTest() {
+      document.getElementById('game-screen').src = icons[testIcons.indexOf(t)].iconName;
+    }
+    runTest();
+  }
+  console.log(testIcons);
+
+
+
+}
+// debugger;
 
 function checkAnswer() {
 

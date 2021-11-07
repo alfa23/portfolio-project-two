@@ -63,7 +63,7 @@ video {
 
 /* main start-panel styling */
 #start-panel {
-  display: none;
+  display: block;
 }
 
 #start-screen {
@@ -102,7 +102,7 @@ video {
 
 /* main score-panel styling */
 #score-panel {
-  display: block;
+  display: none;
 }
 
 #score-screen {
