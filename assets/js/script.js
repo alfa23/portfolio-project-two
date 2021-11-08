@@ -87,48 +87,50 @@ document.addEventListener("DOMContentLoaded", function () {
         checkAnswer();
       }
     })
-    runTest();
+//     setTest();
   }
 })
-function runTest() {
+// function setTest() {
   // Generate array of 5 (# of icons in test) unique random numbers between 1-10 (upper limit should equal max test icons (total # of objects in icons array))
   // Code 
   let testIcons = [];
   while (testIcons.length < 5) {
     let t = Math.floor(Math.random() * 10);
     if (testIcons.indexOf(t) === -1) testIcons.push(t);
-console.log(testIcons);
-    // Assign icon variable, iterate testIcons array & update image html
-    // let icon = 0
-    for (i = 0; i<5; i ++) {
+
+    // Assign & iterate variable r for number of rounds; update html img src & extract correctAnswer from testIcons array values
+    for (r = 0; r<5; r ++) {
       document.getElementById('game-image').src = icons[t].iconName;
       correctAnswer = icons[t].answer;
     }
-  }
+    console.log(testIcons);
+    console.log(document.getElementById('game-image').src);
+    console.log(correctAnswer);
 }
+// }
 
-function checkAnswer() {
+// function checkAnswer() {
 
-  let userAnswer = document.getElementById('answer-box').value;
-  let isCorrect = userAnswer.toLowerCase === correctAnswer.toLowerCase;
+//   let userAnswer = document.getElementById('answer-box').value;
+//   let isCorrect = userAnswer.toLowerCase === correctAnswer.toLowerCase;
 
-  console.log(userAnswer);
-  console.log(correctAnswer);
-  console.log(isCorrect);
+//   if (isCorrect) {
+//     alert('Nerdtastic! You got it right! :D');
+//     incrementScore()
+//   } else {
+//     alert(`Awww... The correct answer was ${correctAnswer}!`);
+//   }
+//   console.log(userAnswer);
+//   console.log(correctAnswer);
+//   console.log(isCorrect);
+// }
 
-  if (isCorrect) {
-    alert('Nerdtastic! You got it right! :D');
-    incrementScore();
-  } else {
-    alert(`Awww... The correct answer was ${correctAnswer}!`);
-  }
-}
-initialScore = 0;
-function incrementScore() {
-  newScore = ++initialScore;
-  initialScore === newScore;
-  console.log(initialScore, newScore);
-}
+// initialScore = 0;
+// function incrementScore() {
+//   newScore = ++initialScore;
+//   initialScore === newScore;
+//   console.log(initialScore, newScore);
+// }
 
 // score-panel script
 
