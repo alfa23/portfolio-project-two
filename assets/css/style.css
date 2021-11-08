@@ -63,13 +63,14 @@ video {
 
 /* main start-panel styling */
 #start-panel {
-  display: none;
+  display: block;
 }
 
 #start-screen {
   border: 3px solid #00ffff;
   width: 400px;
   height: 400px;
+  box-sizing: border-box;
   margin: auto;
   background-color: #191970;
   color: #fff;
@@ -83,7 +84,7 @@ video {
 
 /* main game-panel styling */
 #game-panel {
-  display: block;
+  display: none;
 }
 
 #game-screen {
@@ -177,10 +178,10 @@ form input {
 }
 
 #question-count {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: 'VT323', monospace;
-  color: #00ffff;
-  margin-top: 0.5rem;
+  color: #fff;
+  margin-top: 0.25rem;
 }
 
 .button {

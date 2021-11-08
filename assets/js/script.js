@@ -4,43 +4,43 @@
 
 // Declare array of key:values containing information for nerdOmeter tests
 let icons = [{
-    iconName: 'assets/images/nOm_01.jpg',
+    iconName: 'assets/images/nom_01.jpg',
     answer: 'Assassins Creed'
   },
   {
-    iconName: 'assets/images/nOm_02.jpg',
+    iconName: 'assets/images/nom_02.jpg',
     answer: 'The Avengers'
   },
   {
-    iconName: 'assets/images/nOm_03.jpg',
+    iconName: 'assets/images/nom_03.jpg',
     answer: 'Batman'
   },
   {
-    iconName: 'assets/images/nOm_04.jpg',
+    iconName: 'assets/images/nom_04.jpg',
     answer: 'Game of Thrones'
   },
   {
-    iconName: 'assets/images/nOm_05.jpg',
+    iconName: 'assets/images/nom_05.jpg',
     answer: 'Ghostbusters'
   },
   {
-    iconName: 'assets/images/nOm_06.jpg',
+    iconName: 'assets/images/nom_06.jpg',
     answer: 'Green Lantern'
   },
   {
-    iconName: 'assets/images/nOm_07.jpg',
+    iconName: 'assets/images/nom_07.jpg',
     answer: 'Hunger Games'
   },
   {
-    iconName: 'assets/images/nOm_08.jpg',
+    iconName: 'assets/images/nom_08.jpg',
     answer: 'Jurassic Park'
   },
   {
-    iconName: 'assets/images/nOm_09.jpg',
+    iconName: 'assets/images/nom_09.jpg',
     answer: 'The Legend of Zelda'
   },
   {
-    iconName: 'assets/images/nOm_10.jpg',
+    iconName: 'assets/images/nom_10.jpg',
     answer: 'The Lord of the Rings'
   },
 ];
@@ -111,10 +111,10 @@ function checkAnswer() {
   let isCorrect = userAnswer.toLowerCase() === correctAnswer.toLowerCase();
 
   if (isCorrect) {
-    // alert('Nerdtastic! You got it right! :D');
+    alert('Nerdtastic! You got it right! :D');
     incrementScore()
   } else {
-    // alert(`Awww... The correct answer was ${correctAnswer}!`);
+    alert(`Awww... The correct answer was ${correctAnswer}!`);
   }
   // console.log(userAnswer);
   // console.log(correctAnswer);
@@ -132,6 +132,7 @@ function checkAnswer() {
 // Method to increment score
 let initialScore = 0;
 let score = 0;
+
 function incrementScore() {
   score++;
   console.log(score);
@@ -140,10 +141,12 @@ function incrementScore() {
 function checkGameFinished() {
   console.log(questionNumber);
   if (questionNumber == 5) {
-    alert('GAME OVER PLAYER ONE!');
+    alert('GAME OVER, PLAYER ONE!');
     document.getElementById('score-html').innerHTML = `You got a score of ${score}`;
     document.getElementById('game-panel').style.display = 'none';
     document.getElementById('score-panel').style.display = 'block';
+    // Returns header subhead element copy to original copy
+    document.getElementById('subheader').innerHTML = 'The ULTIMATE nerd test!';
     return true;
   } else {
     return false;
@@ -185,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Main entry point function
-let questionNumber = 0;   // This will al;ways be between 0 and 4 (Q1 - Q5)
+let questionNumber = 0; // This will al;ways be between 0 and 4 (Q1 - Q5)
 function main() {
   document.getElementById('answer-box').value = '';
   getNewSet();
