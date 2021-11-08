@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     })
   }
-})
+});
 
 // Game panel script
 // Get button elements and add event listeners
@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Iterate over main questions to generate a set of 5 unique
 let testIcons = [];
+
 function getNewSet() {
   testIcons = [];
   let alreadySelected = [];
@@ -103,33 +104,54 @@ function getNewSet() {
   }
 }
 
-// function checkAnswer() {
+// Method to check answer
+function checkAnswer() {
+  let userAnswer = document.getElementById('answer-box').value;
+  let correctAnswer = testIcons[questionNumber].answer;
+  let isCorrect = userAnswer.toLowerCase() === correctAnswer.toLowerCase();
 
-//   let userAnswer = document.getElementById('answer-box').value;
-//   let isCorrect = userAnswer.toLowerCase === correctAnswer.toLowerCase;
+  if (isCorrect) {
+    // alert('Nerdtastic! You got it right! :D');
+    incrementScore()
+  } else {
+    // alert(`Awww... The correct answer was ${correctAnswer}!`);
+  }
+  // console.log(userAnswer);
+  // console.log(correctAnswer);
+  // console.log(isCorrect);
+  questionNumber++;
+  let gameIsFinished = checkGameFinished();
+  console.log(gameIsFinished);
+  if (!gameIsFinished) {
+    document.getElementById('question-count').innerHTML = `Question ${(questionNumber + 1)} out of 5`;
+    setQuestion();
+    document.getElementById('answer-box').value = '';
+  }
+}
 
-//   if (isCorrect) {
-//     alert('Nerdtastic! You got it right! :D');
-//     incrementScore()
-//   } else {
-//     alert(`Awww... The correct answer was ${correctAnswer}!`);
-//   }
-//   console.log(userAnswer);
-//   console.log(correctAnswer);
-//   console.log(isCorrect);
-// }
+// Method to increment score
+let initialScore = 0;
+let score = 0;
+function incrementScore() {
+  score++;
+  console.log(score);
+}
 
-// initialScore = 0;
-// function incrementScore() {
-//   newScore = ++initialScore;
-//   initialScore === newScore;
-//   console.log(initialScore, newScore);
-// }
+function checkGameFinished() {
+  console.log(questionNumber);
+  if (questionNumber == 5) {
+    alert('GAME OVER PLAYER ONE!');
+    document.getElementById('score-html').innerHTML = `You got a score of ${score}`;
+    document.getElementById('game-panel').style.display = 'none';
+    document.getElementById('score-panel').style.display = 'block';
+    return true;
+  } else {
+    return false;
+  }
+}
 
 // score-panel script
-
 // Get button elements and add event listeners
-
 document.addEventListener("DOMContentLoaded", function () {
   let buttons = document.getElementsByTagName('button');
 
@@ -145,12 +167,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     })
   }
-})
+});
 
 // fback-panel script
-
 // Get button elements and add event listeners
-
 document.addEventListener("DOMContentLoaded", function () {
   let buttons = document.getElementsByTagName('button');
 
@@ -162,9 +182,27 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     })
   }
-})
+});
 
+// Main entry point function
+let questionNumber = 0;   // This will al;ways be between 0 and 4 (Q1 - Q5)
+function main() {
+  document.getElementById('answer-box').value = '';
+  getNewSet();
+  console.log(testIcons);
+  console.log(testIcons[questionNumber]);
+  setQuestion();
+}
 
+document.addEventListener("DOMContentLoaded", main());
+
+function setQuestion() {
+  document.getElementById('game-image').src = testIcons[questionNumber].iconName;
+}
+
+/**
+ * USER INTERACTION CODE
+ */
 
 // modal box for footer/image credits learnt, borrowed and adapted css-grid code from: https://www.w3schools.com/howto/howto_css_modals.asp
 
