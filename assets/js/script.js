@@ -1,5 +1,8 @@
-// Declare array of key:values containing information for nerdOmeter tests
+/**
+ * GAME CODE
+ */
 
+// Declare array of key:values containing information for nerdOmeter tests
 let icons = [{
     iconName: 'assets/images/nOm_01.jpg',
     answer: 'Assassins Creed'
@@ -40,16 +43,13 @@ let icons = [{
     iconName: 'assets/images/nOm_10.jpg',
     answer: 'The Lord of the Rings'
   },
-]
+];
 
-console.log(icons)
 
 // Wait for the DOM to finish loading before running
 
 // Start-panel script
-
 // Get start button element and add event listener
-
 document.addEventListener("DOMContentLoaded", function () {
   let buttons = document.getElementsByTagName('button');
 
@@ -66,9 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 // Game panel script
-
 // Get button elements and add event listeners
-
 document.addEventListener("DOMContentLoaded", function () {
   let buttons = document.getElementsByTagName('button');
 
@@ -86,28 +84,24 @@ document.addEventListener("DOMContentLoaded", function () {
       if (event.key === 'Enter') {
         checkAnswer();
       }
-    })
-//     setTest();
+    });
   }
-})
-// function setTest() {
-  // Generate array of 5 (# of icons in test) unique random numbers between 1-10 (upper limit should equal max test icons (total # of objects in icons array))
-  // Code 
-  let testIcons = [];
+});
+
+// Iterate over main questions to generate a set of 5 unique
+let testIcons = [];
+function getNewSet() {
+  testIcons = [];
+  let alreadySelected = [];
   while (testIcons.length < 5) {
     let t = Math.floor(Math.random() * 10);
-    if (testIcons.indexOf(t) === -1) testIcons.push(t);
-
-    // Assign & iterate variable r for number of rounds; update html img src & extract correctAnswer from testIcons array values
-    for (r = 0; r<5; r ++) {
-      document.getElementById('game-image').src = icons[t].iconName;
-      correctAnswer = icons[t].answer;
+    if (t in alreadySelected) {
+      continue;
     }
-    console.log(testIcons);
-    console.log(document.getElementById('game-image').src);
-    console.log(correctAnswer);
+    alreadySelected.push(t);
+    testIcons.push(icons[t]);
+  }
 }
-// }
 
 // function checkAnswer() {
 

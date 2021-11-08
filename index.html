@@ -8,9 +8,6 @@
 
   <!-- favicon -->
   <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-
-  <!-- font awesome -->
-
   <link rel="stylesheet" href="assets/css/style.css">
   <title>nerdOmeter</title>
 </head>
@@ -49,10 +46,10 @@
       </div>
 
       <!-- user inputs section with text input & feedback/start buttons -->
-      <div id="user-input">
+      <div class="user-input">
         <input type="text" placeholder="Hit NERD IT to play!">
         <button data-type="start" class="button" id="start-button">NERD IT</button>
-        <button data-type="fback" class="button" id="disabled-button" disabled>FEEDBACK</button>
+        <button data-type="fback" class="button" disabled>FEEDBACK</button>
       </div>
     </main>
 
@@ -64,7 +61,8 @@
       </div>
 
       <!-- user inputs section with text input & submit/pass buttons -->
-      <div id="user-input">
+      <div class="user-input">
+        <p id="question-count">Question 1 out of 5</p>
         <input type="text" id="answer-box" placeholder="Type your answer here">
         <button data-type="submit-answer" class="button" id="submit-answer-button">SUBMIT</button>
         <button data-type="pass" class="button" id="pass-button">PASS/NEXT</button>
@@ -78,13 +76,13 @@
         <h2><span>WELL DONE!</span></h2>
         <br>
         <h2><span id="score-html">score inner html</span></h2>
-        <br>
+        <!-- <br>
         <h3>Your rank:</h3>
-        <h2><span id="rank-html">rank inner html</span></h2>
+        <h2><span id="rank-html">rank inner html</span></h2> -->
       </div>
 
       <!-- user inputs section with text input & start(PLAY AGAIN)/feedback buttons -->
-      <div id="user-input">
+      <div class="user-input">
         <input type="text" placeholder="Thanks for playing! Try again?">
         <button data-type="start" class="button" id="start-button">PLAY AGAIN</button>
         <button data-type="fback" class="button" id="fback-button">FEEDBACK</button>
@@ -111,10 +109,10 @@
       </div>
 
       <!-- user inputs section with text input & start(PLAY AGAIN)/feedback(disabled) buttons -->
-      <div id="user-input">
+      <div class="user-input">
         <input type="text" placeholder="Thanks for your comments!">
         <button data-type="start" class="button" id="start-button">PLAY AGAIN</button>
-        <button data-type="fback" class="button" id="disabled-button" disabled>FEEDBACK</button>
+        <button data-type="fback" class="button" disabled>FEEDBACK</button>
       </div>
     </main>
 
@@ -127,12 +125,9 @@
           <div class="modal-content">
             <span class="close">&times;</span>
             <p>
-              Image Credits: <br> 20th Century Studios (The Walt Disney Company) | Columbia Pictures Ghost Corps (Sony
-              Pictures) | DC Comics Inc./Warner Bros. Entertainment | Hasbro/Takara Tomy/The Walt Disney Company | HBO |
-              J.K.Rowling/Warner Bros. Entertainment | Lionsgate | Lucasfilm/The Walt Disney Company | Marvel
-              Enterprises/The Walt Disney Company | Middle-earth Enterprises | Nintendo | Paramount Pictures/CBS
-              Corporation | Ubisoft (US)/Sony Pictures | Universal Pictures Amblin Entertainment | Warner Bros. | Warner
-              Bros. Television
+              Image Credits: <br> Columbia Pictures Ghost Corps (Sony Pictures) | DC Comics Inc./Warner Bros. Entertainment | DC Entertainment De Line Pictures/Warner Bros. Pictures | Hasbro/Takara Tomy/The Walt Disney Company | HBO |
+              Lionsgate | Lucasfilm/The Walt Disney Company | Marvel Enterprises/The Walt Disney Company | Middle-earth Enterprises | Nintendo | Paramount Pictures/CBS
+              Corporation | Ubisoft (US)/Sony Pictures | Universal Pictures Amblin Entertainment | Warner Bros.
             </p>
             <br>
             <p>For full details including image sources, please see <a href="nerdOmeter.html" target="_blank">here</a>.
@@ -145,7 +140,6 @@
 
   <!-- javascript call after page html load -->
   <script src="assets/js/script.js"></script>
-  <!-- <script src="assets/js/script_game_only.js"></script> -->
 </body>
 
 </html>

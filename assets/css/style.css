@@ -43,9 +43,9 @@ body {
   color: #fff;
 }
 
-/* body a {
+body a {
     text-decoration: none;
-} */
+}
 
 /* page background video - modified code from https://w3collective.com/fullscreen-video-background/ */
 
@@ -164,7 +164,7 @@ form input {
 }
 
 /* user-input styling */
-#user-input input {
+.user-input input {
   display: block;
   margin: 0.5rem auto 0;
   width: 33%;
@@ -174,6 +174,13 @@ form input {
   text-align: center;
   padding: 1px;
   color: #191970;
+}
+
+#question-count {
+  font-size: 2.5rem;
+  font-family: 'VT323', monospace;
+  color: #00ffff;
+  margin-top: 0.5rem;
 }
 
 .button {
@@ -254,7 +261,7 @@ form input {
 /* media query scaling user-inputs for screen width 950px and below */
 
 @media screen and (max-width: 950px) {
-  #user-input input {
+  .user-input input {
     width: 300px;
   }
   
