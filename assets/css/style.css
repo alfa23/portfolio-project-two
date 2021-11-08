@@ -63,7 +63,7 @@ video {
 
 /* main start-panel styling */
 #start-panel {
-  display: block;
+  display: none;
 }
 
 #start-screen {
@@ -83,7 +83,7 @@ video {
 
 /* main game-panel styling */
 #game-panel {
-  display: none;
+  display: block;
 }
 
 #game-screen {
