@@ -9,7 +9,7 @@ let icons = [{
   },
   {
     iconName: 'assets/images/nom_02.jpg',
-    answer: 'The Avengers'
+    answer: 'Avengers'
   },
   {
     iconName: 'assets/images/nom_03.jpg',
@@ -37,12 +37,32 @@ let icons = [{
   },
   {
     iconName: 'assets/images/nom_09.jpg',
-    answer: 'The Legend of Zelda'
+    answer: 'Legend of Zelda'
   },
   {
     iconName: 'assets/images/nom_10.jpg',
-    answer: 'The Lord of the Rings'
+    answer: 'Lord of the Rings'
   },
+  {
+    iconName: 'assets/images/nom_11.jpg',
+    answer: 'Star Trek'
+  },
+  {
+    iconName: 'assets/images/nom_12.jpg',
+    answer: 'Star Wars'
+  },
+  {
+    iconName: 'assets/images/nom_13.jpg',
+    answer: 'Thundercats'
+  },
+  {
+    iconName: 'assets/images/nom_14.jpg',
+    answer: 'Transformers'
+  },
+  {
+    iconName: 'assets/images/nom_15.jpg',
+    answer: 'Wonder Woman'
+  }
 ];
 
 
@@ -95,8 +115,8 @@ function getNewSet() {
   testIcons = [];
   let alreadySelected = [];
   while (testIcons.length < 5) {
-    let t = Math.floor(Math.random() * 10);
-    if (t in alreadySelected) {
+    let t = Math.floor(Math.random() * 15);
+    if (alreadySelected.includes(t)) {
       continue;
     }
     alreadySelected.push(t);
@@ -114,7 +134,7 @@ function checkAnswer() {
     alert('Nerdtastic! You got it right! :D');
     incrementScore();
   } else {
-    alert(`Awww... The correct answer was ${correctAnswer}!`);
+    alert(`Nerdmare! The correct answer was ${correctAnswer}!`);
   }
   // console.log(userAnswer);
   // console.log(correctAnswer);
