@@ -3,9 +3,9 @@
 
 /* initial page reset for bkgrd video & global settings */
 * {
-    margin: 0;
-    padding: 0;
-    border: none;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 /* consistent footer behaviour controlled using learnt, borrowed and adapted css-grid code from: https://dev.to/niorad/keeping-the-footer-at-the-bottom-with-css-grid-15mf */
@@ -15,11 +15,12 @@ html {
 }
 
 body {
-    background-color: #000;
-    font-family: 'VT323', monospace;
-    text-align: center;
-    width: 100%;
-    height: 100%;
+  box-sizing: border-box;
+  background-color: #000;
+  font-family: 'VT323', monospace;
+  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
 #container {
@@ -44,7 +45,7 @@ body {
 }
 
 body a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* page background video - modified code from https://w3collective.com/fullscreen-video-background/ */
@@ -70,7 +71,6 @@ video {
   border: 3px solid #00ffff;
   width: 400px;
   height: 400px;
-  box-sizing: border-box;
   margin: auto;
   background-color: #191970;
   color: #fff;
@@ -110,12 +110,11 @@ video {
   border: 3px solid #00ffff;
   width: 400px;
   height: 400px;
-  box-sizing: border-box;
   padding-top: 4rem;
   margin: auto;
   background-color: #191970;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 /* main fback-panel styling */
@@ -127,7 +126,6 @@ video {
   border: 3px solid #00ffff;
   width: 400px;
   height: 400px;
-  box-sizing: border-box;
   padding-top: 0.5rem;
   margin: auto;
   background-color: #191970;
@@ -177,11 +175,15 @@ form input {
   color: #191970;
 }
 
-#question-count {
+#mssg-banner {
   font-size: 2rem;
   font-family: 'VT323', monospace;
+  display: inline-block;
   color: #fff;
   margin-top: 0.25rem;
+  padding: 5px, 30px, 15px;
+  background-color: #191970;
+  width: 275px;
 }
 
 .button {
@@ -198,7 +200,10 @@ form input {
   font-family: 'VT323', monospace;
 }
 
-#start-button:hover, #submit-answer-button:hover, #pass-button:hover, #fback-button:hover {
+.start-button:hover,
+#submit-answer-button:hover,
+#pass-button:hover,
+#fback-button:hover {
   background-color: #191970;
   color: #00ffff;
 }
@@ -223,25 +228,35 @@ form input {
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
+  /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #00ffff;
-  width: 40%; /* Could be more or less, depending on screen size */
+  width: 40%;
+  /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
@@ -265,7 +280,7 @@ form input {
   .user-input input {
     width: 300px;
   }
-  
+
   .button {
     width: 300px;
   }
@@ -279,12 +294,14 @@ form input {
     font-size: 1.9rem;
     text-shadow: 0px 0px 15px #fff;
   }
-  
+
   #subheader {
     font-size: 1.5rem;
   }
-  
-  #start-screen, #game-screen, #score-screen {
+
+  #start-screen,
+  #game-screen,
+  #score-screen {
     width: 300px;
     height: 300px;
     font-size: 1.5rem;
@@ -305,7 +322,7 @@ form input {
     padding: 0.2rem;
     margin: 0.3rem;
   }
-  
+
   #form-submit {
     padding: 0.2rem 1rem;
     font-size: 0.75rem;
@@ -315,9 +332,11 @@ form input {
 
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
+    /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #00ffff;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
+    /* Could be more or less, depending on screen size */
   }
 }

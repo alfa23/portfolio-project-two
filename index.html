@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <!-- meta tags for SEO -->
+  <meta name="description" content="Know your fandoms? Take the ULTIMATE nerd test!">
+  <meta name="keywords" content="HTML, CSS, JavaScript, nerds">
+  <meta name="author" content="PaW/alfa23">
   <!-- favicon -->
   <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
   <link rel="stylesheet" href="assets/css/style.css">
@@ -35,8 +38,8 @@
         <h2>How <span>BIG</span> a</h2>
         <h2><span>NERD</span> are <span>YOU</span>..?</h2>
         <br>
-        <p>Complete <span>10 rounds</span> to</p>
-        <p><span>RANK</span> your <span>NERDINESS</span>!</p>
+        <p>Complete <span>5 rounds</span> to</p>
+        <p>test your <span>NERDINESS</span>!</p>
         <br>
         <p>Your <span>MISSION</span> is to</p>
         <p>name the <span>FANDOM</span> that each</p>
@@ -48,7 +51,7 @@
       <!-- user inputs section with text input & feedback/start buttons -->
       <div class="user-input">
         <input type="text" placeholder="Hit NERD IT to play!">
-        <button data-type="start" class="button" id="start-button">NERD IT</button>
+        <button data-type="start" class="button start-button">NERD IT</button>
         <button data-type="fback" class="button" disabled>FEEDBACK</button>
       </div>
     </main>
@@ -62,7 +65,7 @@
 
       <!-- user inputs section with text input & submit/pass buttons -->
       <div class="user-input">
-        <p id="question-count">Question 1 out of 5</p>
+        <p id="mssg-banner">Question 1 out of 5</p>
         <input type="text" id="answer-box" placeholder="Type your answer here">
         <button data-type="submit-answer" class="button" id="submit-answer-button">SUBMIT</button>
         <button data-type="pass" class="button" id="pass-button">PASS/NEXT</button>
@@ -73,6 +76,7 @@
     <main id="score-panel">
       <!-- score screen section -->
       <div id="score-screen">
+        <br>
         <h2><span>WELL DONE!</span></h2>
         <br>
         <h2><span id="score-html">score inner html</span></h2>
@@ -84,7 +88,7 @@
       <!-- user inputs section with text input & start(PLAY AGAIN)/feedback buttons -->
       <div class="user-input">
         <input type="text" placeholder="Thanks for playing! Try again?">
-        <button data-type="start" class="button" id="start-button">PLAY AGAIN</button>
+        <button data-type="start" class="button start-button">PLAY AGAIN</button>
         <button data-type="fback" class="button" id="fback-button">FEEDBACK</button>
       </div>
     </main>
@@ -111,7 +115,7 @@
       <!-- user inputs section with text input & start(PLAY AGAIN)/feedback(disabled) buttons -->
       <div class="user-input">
         <input type="text" placeholder="Thanks for your comments!">
-        <button data-type="start" class="button" id="start-button">PLAY AGAIN</button>
+        <button data-type="start" class="button start-button">PLAY AGAIN</button>
         <button data-type="fback" class="button" disabled>FEEDBACK</button>
       </div>
     </main>

@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Changes header subhead element copy to test question
         document.getElementById('subheader').innerHTML = 'What is this logo from?';
       }
-    })
+    });
   }
 });
 
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (this.getAttribute('data-type') === 'pass') {
         checkAnswer();
       }
-    })
+    });
     // Event listener for user pressing Enter instead of clicking submit button
     document.getElementById('answer-box').addEventListener('keydown', function (event) {
       if (event.key === 'Enter') {
@@ -112,7 +112,7 @@ function checkAnswer() {
 
   if (isCorrect) {
     alert('Nerdtastic! You got it right! :D');
-    incrementScore()
+    incrementScore();
   } else {
     alert(`Awww... The correct answer was ${correctAnswer}!`);
   }
@@ -123,14 +123,14 @@ function checkAnswer() {
   let gameIsFinished = checkGameFinished();
   console.log(gameIsFinished);
   if (!gameIsFinished) {
-    document.getElementById('question-count').innerHTML = `Question ${(questionNumber + 1)} out of 5`;
+    document.getElementById('mssg-banner').innerHTML = `Question ${(questionNumber + 1)} out of 5`;
     setQuestion();
     document.getElementById('answer-box').value = '';
   }
 }
 
 // Method to increment score
-let initialScore = 0;
+// let initialScore = 0;
 let score = 0;
 
 function incrementScore() {
@@ -141,8 +141,7 @@ function incrementScore() {
 function checkGameFinished() {
   console.log(questionNumber);
   if (questionNumber == 5) {
-    alert('GAME OVER, PLAYER ONE!');
-    document.getElementById('score-html').innerHTML = `You got a score of ${score}`;
+    document.getElementById('score-html').innerHTML = `You got a score of<br>${score}`;
     document.getElementById('game-panel').style.display = 'none';
     document.getElementById('score-panel').style.display = 'block';
     // Returns header subhead element copy to original copy
@@ -162,13 +161,13 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener('click', function () {
       if (this.getAttribute('data-type') === 'start') {
         document.getElementById('score-panel').style.display = 'none';
-        document.getElementById('game-panel').style.display = 'block'
+        document.getElementById('game-panel').style.display = 'block';
       }
       if (this.getAttribute('data-type') === 'fback') {
         document.getElementById('score-panel').style.display = 'none';
-        document.getElementById('fback-panel').style.display = 'block'
+        document.getElementById('fback-panel').style.display = 'block';
       }
-    })
+    });
   }
 });
 
@@ -181,14 +180,14 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener('click', function () {
       if (this.getAttribute('data-type') === 'start') {
         document.getElementById('fback-panel').style.display = 'none';
-        document.getElementById('game-panel').style.display = 'block'
+        document.getElementById('game-panel').style.display = 'block';
       }
-    })
+    });
   }
 });
 
 // Main entry point function
-let questionNumber = 0; // This will al;ways be between 0 and 4 (Q1 - Q5)
+let questionNumber = 0; // This will always be between 0 and 4 (Q1 - Q5)
 function main() {
   document.getElementById('answer-box').value = '';
   getNewSet();
@@ -200,6 +199,8 @@ function main() {
 document.addEventListener("DOMContentLoaded", main());
 
 function setQuestion() {
+  // console.log(testIcons);
+  // console.log(testIcons[questionNumber]);
   document.getElementById('game-image').src = testIcons[questionNumber].iconName;
 }
 
@@ -221,16 +222,16 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on the button, open the modal
 btn.onclick = function () {
   modal.style.display = "block";
-}
+};
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
   modal.style.display = "none";
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+};
