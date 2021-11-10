@@ -492,7 +492,7 @@ In addition to my own testing a link to the project was shared to family & frien
 | Gameplay | Ensure game answer checking works as expected: letter case matching; answers are correct! | PASS |
 | Gameplay | Ensure game score tracking works as expected: logs correct / incorrect | PASS | 
 | Inputs | Ensure button functions perform as expected | PASS |
-| Inputs | Ensure Enter-as-SUBMIT function performs as expected: | BUG! |
+| Inputs | Ensure Enter-as-SUBMIT function performs as expected: | ~~BUG!~~ PASS |
 | Responsive | Ensure responsive behaviour rules are met as expected | PASS |
 
 
@@ -518,32 +518,29 @@ In addition to my own testing a link to the project was shared to family & frien
 ## BUGS and FIXES
 
 
-### **Bug: Duplicate images** in some gameplay runs
+~~### **Bug: Duplicate images** in some gameplay runs~~
   
   • *Issue:* Duplicate icons appearing during some games
   
-  • *Fix:* Identified and rectified a coding error in JavaScript RNG function
+  • *Fixed:* Identified and rectified a coding error in JavaScript RNG function
 
 
-### **Bug: Enter-as-SUBMIT** causes game glitch if used during gameplay runs
+~~### **Bug: Enter-as-SUBMIT** causes game glitch if used during gameplay runs~~
   
   • *Issue:* Pressing Enter rather than submit to post answers causes the game to play itself and complete the remaining rounds with wrong answers. This feature has previously been working as expected but now glitches the game. Really frustrating! 
   
-  • *Fix:* Pending... but considering disabling the feature in a worst-case scenario!
+  • *Fixed:* Fixed by repositioning event listener code block within the function.
 
 
 ### **Bug: Play Again button** fails to reset game panel correctly for another run
   
   • *Issue:* Clicking Play Again on the score or feedback panels takes user back to the game panel but doesn't reset and reload the game again properly; the icon & answer from the previous game still populates the screen & textbox; round-count is still set at 5/5; unable to interact with user inputs. 
   
-  • *Fix:* Pending...
+  • *Fix:* Pending... managed to get user input but it throws an error.
 
+  ![Annoying bug](readme_media/check_screens/pp02_annoying_bug.png)
 
-### **Bug:**
-  
-  • *Issue:* 
-  
-  • *Fix:* 
+  Note to assessors: Unfortunately - and much to my frustration - I was unable to squash this bug before deadline, which is really annoying as it would have been MVP. My apologies.
 
 
 # Deployment

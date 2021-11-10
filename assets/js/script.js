@@ -99,13 +99,13 @@ document.addEventListener("DOMContentLoaded", function () {
         checkAnswer();
       }
     });
-    // Event listener for user pressing Enter instead of clicking submit button
-    document.getElementById('answer-box').addEventListener('keydown', function (event) {
-      if (event.key === 'Enter') {
-        checkAnswer();
-      }
-    });
   }
+  // Event listener for user pressing Enter instead of clicking submit button
+  document.getElementById('answer-box').addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+      checkAnswer();
+    }
+  });
 });
 
 // Iterate over main questions to generate a set of 5 unique
@@ -136,12 +136,8 @@ function checkAnswer() {
   } else {
     alert(`Nerdmare! The correct answer was ${correctAnswer}!`);
   }
-  // console.log(userAnswer);
-  // console.log(correctAnswer);
-  // console.log(isCorrect);
   questionNumber++;
   let gameIsFinished = checkGameFinished();
-  console.log(gameIsFinished);
   if (!gameIsFinished) {
     document.getElementById('mssg-banner').innerHTML = `Question ${(questionNumber + 1)} out of 5`;
     setQuestion();
@@ -150,16 +146,15 @@ function checkAnswer() {
 }
 
 // Method to increment score
-// let initialScore = 0;
 let score = 0;
 
 function incrementScore() {
   score++;
-  console.log(score);
+  // console.log(score);
 }
 
 function checkGameFinished() {
-  console.log(questionNumber);
+  // console.log(questionNumber);
   if (questionNumber == 5) {
     document.getElementById('score-html').innerHTML = `You got a score of<br>${score}`;
     document.getElementById('game-panel').style.display = 'none';
@@ -211,16 +206,12 @@ let questionNumber = 0; // This will always be between 0 and 4 (Q1 - Q5)
 function main() {
   document.getElementById('answer-box').value = '';
   getNewSet();
-  console.log(testIcons);
-  console.log(testIcons[questionNumber]);
   setQuestion();
 }
 
 document.addEventListener("DOMContentLoaded", main());
 
 function setQuestion() {
-  // console.log(testIcons);
-  // console.log(testIcons[questionNumber]);
   document.getElementById('game-image').src = testIcons[questionNumber].iconName;
 }
 
