@@ -1,10 +1,14 @@
-![nerdOmeter header](readme_media/site_screens/pp02_header_default_lg.png)
+# **INTRODUCTION**
 
 ----
 
-**nerdOmeter** is a site that hopes  
+The aim of this project is to utilise JavaScript, HTML & CSS to develop a fun-yet-challenging test for nerds everywhere: As Pokémon-spotting could arguably be considered one of the ultimate tests of nerd knowledge and geekdom, this project was originally envisioned as: **PokéDeX•Trainer**, ***Gotta ID 'em ALL!***
 
-The **nerdOmeter** site will be useful for nerds wishing to test their nerdiness, and also offer the opportunity to ... 
+![Initial Project Doodlings](readme_media/planning_docs/portfolio_project_two_thinx.png)
+
+However, given **Nintendo's** notorious [zero-tolerance approach to the use of their IPS](https://www.quora.com/Why-is-Nintendo-so-strict-about-copyright-laws), caution was obviously prudent. After seeking advice and following further [online research](https://www.buzzfeed.com/audreyworboys/fandom-logo-quiz), a different devious design was adopted for development: ***Behold the...***
+
+![nerdOmeter header](readme_media/site_screens/pp02_header_default_lg.png)
 
 ---- 
 
@@ -12,13 +16,13 @@ The **nerdOmeter** site will be useful for nerds wishing to test their nerdiness
 
 ## PROJECT GOALS
 
-![Initial Project Doodlings](readme_media)
+**nerdOmeter** aims to cater for nerds wishing to test their nerdiness and prove their fandom knowledge. 
 
 ## External User Goals: 
 
-- 
-- 
-- Ability to contact 
+- To test their nerd knowledge using a simple-yet-stylish interactive online experience
+- Identify a random selection of **Fandom franchises** from their logos alone
+- Option to request features and leave feedback via a prominent contact method 
 
   Additional ***user expectations*** for consideration include:
   - Intuitive/conventional navigation elements
@@ -27,21 +31,22 @@ The **nerdOmeter** site will be useful for nerds wishing to test their nerdiness
 
 ## Site Owner Goals:
 
-- Establish a simple-yet-stylish test for nerdiness
-- Ability to 
-- Opportunity for other nerdy types to make contact & offer feedback 
+- Develop a simple-yet-stylish interactive online test for nerdiness
+- Offer the opportunity for other nerdy types to make contact and offer feedback/suggestions 
   
   Additional ***stakeholder concerns*** for consideration: 
   - Geeky, retro feel with some animated element(s) preferred; page background/icons/logo
-  - Multiple themed galleries rather than all-artworks-in-one
-  - Potential for future expansion of question base 
+  - Provide clear credits and image information for all logos utilised in the test 
+  - The ability to easily expand and/or change the test material 
 
 
 ## Potential Features:
 
 Considering the goals, expectations and concerns detailed above, potential features for the **nerdOmeter** site should include:
-- A stylish and effective design with easy, intuitive navigation - and some animation!
-- A prominent contact methods; feedback form
+- A stylish, retro feel with easy, intuitive navigation/controls - and some animation!
+- To test user's knowledge in an engaging-yet-challenging experience 
+- Provide a prominent contact method for user interaction
+- Potential to easily expand/change test content
 - Potential for a Rankings or Leaderboard feature
 
 ---- 
@@ -51,28 +56,28 @@ Considering the goals, expectations and concerns detailed above, potential featu
 ### Analysis and grading of *Phase One considerations* allows a simple ***Strategy Table*** to be generated:
 
 
-| OPPORTUNITY/PROBLEM/FEATURE | IMPORTANCE | VIABILITY/FEASIBILITY | ID    | 
-|-----------------------------|:----------:|:---------------------:|:-------
-| Stylish website             | 5          | 5                     | A     |
-| Multiple artwork galleries  | 5          | 4                     | B     |
-| Prominent contact options   | 5          | 5                     | C     |
-| 'About' artist info         | 5          | 5                     | D     |
-| E-commerce elements         | 3          | 1                     | E     |
-| TOTAL                       | 23         | 20                    |       |
+| OPPORTUNITY/PROBLEM/FEATURE                | IMPORTANCE | VIABILITY/FEASIBILITY | ID    | 
+|--------------------------------------------|:----------:|:---------------------:|:-------
+| Intuitive interactive online experience    | 5          | 4                     | A     |
+| Fun & challenging test of knowledge        | 5          | 4                     | B     |
+| Prominent contact options                  | 5          | 5                     | C     |
+| Potential to expand/change content         | 4          | 5                     | D     |
+| Potential for Ranking/Leaderboard feature  | 3          | 2                     | E     |
+| TOTAL                                      | 22         | 20                    |       |
 
 
-![UCD Strategic Trade-Offs: Importance vs Feasibility](readme_media)
+![UCD Strategic Trade-Offs: Importance vs Feasibility](readme_media/planning_docs/uxd_strategic_tradeoffs.png)
 
 ## Strategic Trade-offs
 
-Plotting the Strategy Table results provides a visible indication of what is feasibily within the scope of the project at this time. As I am unable to meet all requirements at present, I will aim to provide RJW Illustration initially as an MVP or Minimum Viable Product, therefore: 
-  Due to time and current-skill limitations (and to also remain close to the number of pages required for this project) the site will be delivered in phases.
+Plotting the Strategy Table results provides a visible indication of what is feasibily within the scope of the project at this time. As I am unable to meet all requirements at present, I will aim to provide **nerdOmeter** initially as an MVP or Minimum Viable Product, therefore: 
+  Due to time and current-skill limitations the site will be developed in phases:
 
   ***Initial Phase:*** Delivery of MVP, a fully functioning website, with the exception of
     
-  - E-commerce features/preparations. As a low stakeholder priority, this will follow at a later date as required (and skill levels increase!)
+  - Potential expansion of test material (primarily to increase user-challenge) withheld and focusing on a smaller subset of images (15) and shorter test length (5) in order develop working proof-of-concept 
   
-  - Initial gallery count of two. Sufficient for proof of concept, subsequent galleries will be added in sunsequent phases.
+  - Provision of Leaderboard/Ranking feature to be considered as/when time allows
 
 ----
 
@@ -80,13 +85,9 @@ Plotting the Strategy Table results provides a visible indication of what is fea
 
 ## **nerdOmeter** Layout 
 
-Maps generated in [**Balsamiq**](https://balsamiq.com) 
+Rather than relying on multiple HTML and CSS pages, this project aims to primarily utilise JavaScript to control and affect the transitions and functions of a single-page online experience. To this end, and after careful consideration and [research](https://stackoverflow.com/questions/40141361/can-i-use-multiple-main-elements-in-a-multipage-document), the decision was made to contravene a pre-HTML5 convention and to utilise more than one `<main>` tag in the index.html; however, through the use of the `display:'block'` and `display:'none'` attributes, there is only ever one `<main>` element visible at a time.
 
-Prior to generating my wireframes in Balsamiq, I used it's handy Site Map element to better visualise the basic structure and navigation between proposed site pages. 
-
-As with all good wireframes, they are only a guide and subject to change! Amalgamation of pages (following Project Planning session advice from my Mentor - thanks, Marcel!) and project phasing resulted in the final site layout below.
-
-![stackoverflow](readme_media)
+![stackoverflow](readme_media/planning_docs/pp02_multiple_mains.png)
 
 ---- 
 
@@ -96,14 +97,19 @@ As with all good wireframes, they are only a guide and subject to change! Amalga
 
 Following current conventional practice, **nerdOmeter** was designed with a Mobile First approach.
 
+----
+
+
+![Balsamiq Start](readme_media/planning_docs/wireframes/m1_start-screen.png) 
+![Balsamiq Game](readme_media/planning_docs/wireframes/m2_game-screen.png)
+![Balsamiq Modal](readme_media/planning_docs/wireframes/m2a_game-screen_alt.png)
+
+----
+
+![Balsamiq Score](readme_media/planning_docs/wireframes/m3_score-screen.png)
+![Balsamiq Feedback](readme_media/planning_docs/wireframes/m4__fback-screen.png)
+
 All wireframes generated in [Balsamiq](https://balsamiq.com)
-
-![Balsamiq Start](readme_media) 
-![Balsamiq Game](readme_media)
-![Balsamiq Modal](readme_media)
-![Balsamiq Score](readme_media)
-![Balsamiq Feedback](readme_media)
-
 
 ---- 
 
@@ -114,9 +120,10 @@ All wireframes generated in [Balsamiq](https://balsamiq.com)
 ## Fonts
 
 All fonts utilised in this project were sourced from and served by [**Google Fonts**](https://fonts.google.com)
+
 - **Heading Font:** *Press Start 2P*
   
-  *Press Start P2* is a cursive style font with a retro-tech, pixellated appearance. It was chosen as it effectively conveys the nerdy aesthetic of both site focus and content.
+  *Press Start P2* is a cursive style font with a gamer-geek/retro-tech, pixellated appearance. It was chosen as it effectively conveys the nerdy aesthetic of both site focus and content.
 
 - **Body Font:** *VT323*
 
@@ -126,16 +133,19 @@ All fonts utilised in this project were sourced from and served by [**Google Fon
 
 ## Colours
 
-- **#000000** *colour name*
+The **60:40:10 rule** was used when determining colours, which were chosen from the palette of the background video
 
-  Colours were chosen from the palette of the background video.
-
+  • 60% Background/Primary - **#191970** *Midnight Blue*
+  
+  • 40% Body Text/Secondary: **#fff** *White* chosen for excellent contrast with Primary
+  
+  • 10% Accent/Tertiary: **#00ffff** *Cyan* chosen as a clean, fresh contrast to Primary and compliment to Tertiary
 
 ## Imagery
 
-### All icons utilised in **nerdOmeter** are credited within the site, via the modal link in the footer, in addition to a summary available 
+### All icons utilised in **nerdOmeter** are credited within the site, via the modal link in the footer, in addition to this [nerdOmeter Image Credits PDF](readme_media/planning_docs/nerdOmeter.pdf) summary 
 
-![nerdOmeter Image Credits PDF](readme_media/planning_docs/nerdOmeter.pdf)
+----
 
 ## TECHNOLOGIES
 
@@ -143,7 +153,7 @@ During the course of this project I have utilised the following technologies:
 
 ## Languages
 
-- [**JavaScript**] (https://www.javascript.com/)
+- [**JavaScript**](https://www.javascript.com/) was used to add interactivity and enrich the User eXperience
 
 - [**HTML5**](https://html.com/html5/) (HyperText Markup Language) was used for structuring & presenting site content
 
@@ -177,7 +187,9 @@ During the course of this project I have utilised the following technologies:
 
 - **Site-wide Header with Logo and Dynamic Subheader**
 
-![Site-wide Logo & Subheader](readme_media)
+![Site-wide Logo & Dynamic Subheader](readme_media/site_screens/pp02_header_default_lg.png)
+
+![Site-wide Logo & Dynamic Subheader Game Panel](readme_media/site_screens/pp02_header_game.png)
 
   - Visually balancing the top-left-aligned nav elements, the RJW Illustration logo is rendered top-right using Amatic SC, a cursive web font in a simple, hand-drawn style.
   - Featured on all website pages, the fully responsive header includes links to the Home page, Portfolio landing page and Contact page and is identical on each page to allow for easy navigation.
