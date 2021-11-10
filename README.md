@@ -6,7 +6,7 @@ The aim of this project is to utilise JavaScript, HTML & CSS to develop a fun-ye
 
 ![Initial Project Doodlings](readme_media/planning_docs/portfolio_project_two_thinx.png)
 
-However, given **Nintendo's** notorious [zero-tolerance approach to the use of their IPS](https://www.quora.com/Why-is-Nintendo-so-strict-about-copyright-laws), caution was obviously prudent. After seeking advice and following further [online research](https://www.buzzfeed.com/audreyworboys/fandom-logo-quiz), a different devious design was adopted for development: ***Behold the...***
+However, given **Nintendo's** notorious [zero-tolerance approach to the use of their IPs](https://www.quora.com/Why-is-Nintendo-so-strict-about-copyright-laws), caution was obviously prudent. After seeking advice and following further [online research](https://www.buzzfeed.com/audreyworboys/fandom-logo-quiz), a different devious design was adopted for development: ***Behold the...***
 
 ![nerdOmeter header](readme_media/site_screens/pp02_header_default_lg.png)
 
@@ -133,7 +133,7 @@ All fonts utilised in this project were sourced from and served by [**Google Fon
 
 ## Colours
 
-The **60:40:10 rule** was used when determining colours, which were chosen from the palette of the background video
+Colours utilised were chosen from the palette of the background video, with the **60:40:10 rule** in mind 
 
   • 60% Background/Primary - **#191970** *Midnight Blue*
   
@@ -185,64 +185,78 @@ During the course of this project I have utilised the following technologies:
 
 ## Site-wide Features
 
-- **Site-wide Header with Logo and Dynamic Subheader**
+**Site-wide Header with Logo and Dynamic Subheader**
 
 ![Site-wide Logo & Dynamic Subheader](readme_media/site_screens/pp02_header_default_lg.png)
 
 ![Site-wide Logo & Dynamic Subheader Game Panel](readme_media/site_screens/pp02_header_game.png)
 
-  - Visually balancing the top-left-aligned nav elements, the RJW Illustration logo is rendered top-right using Amatic SC, a cursive web font in a simple, hand-drawn style.
-  - Featured on all website pages, the fully responsive header includes links to the Home page, Portfolio landing page and Contact page and is identical on each page to allow for easy navigation.
-    - This allows the user to consistently navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
-  - The example below shows an underline in the site's chosen accent colour, Chartreuse, indicating the current **active** page.
+  - The main site page employs a simple centred block styling, stacking the page elements under the main header
+      • No nav elements required as all site navigations controlled via code and direct user inputs
+  - A dynamic subheader directly below the main header carrys the **nerdOmeter** strapline ***The ULTIMATE nerd test!*** by default
+      • During the *game* phase the subheader content asks the user the million-dollar-question; 'What is this logo from?' 
+      • Subheader content is returned to default when the score panel activates at the end of the *game* phase
 
-- **Site-wide Animated Page Background**
+**Site-wide Animated Page Background**
 
-  - The main Home page section consists of an original animated (.mp4) background created by RJW 
-    - RJW intends to regularly update the background with fresh animations, encouraging visitors to return and check for new work playing
-  - Pages containing copy have been styled with a dark tinted panel behind to reduce contrast between the white copy and underlying animation, this assists users by enhancing contrast and legibility 
+  - The main Home page section consists of a royalty-free stock animated video (.mp4) background, chosen for it's retroesque-with-a-modern-twist look and feel of geeky video games and cartoons 
+    - Sourced from ***Videezy***, as detailed in Contents
   
-![Neontrack mp4](readme_media)
 
+**Site-wide Footer** 
 
-- **Site-wide Footer** 
+  - The footer section incorporates a JavaScript-controlled modal link containing image credits for all utilised images
+  
+![Site-wide Footer](readme_media/site_screens/pp02_footer.png)
 
-  - The footer section includes links to Instagram and Behance external sites and will open to a new tab, allowing easy navigation for the user. This is valuable to site users as it encourages them to keep connected via social media.
-  - Additional site-wide breadcrumb-style nav links included in the footer allow easy user navigation to Home, Portfolio and Contact pages at the bottom of long gallery pages and pages on smaller, responsive-styled screens.
+![Site-wide Footer Modal](readme_media/site_screens/pp02_footer_modal_active.png)
 
-![Site-wide Footer](readme_media)
+## Start Panel Features
 
-![Site-wide Footer Modal](readme_media)
+  - The start panel screen displays the premise of the game to first-time and returning users
+  - The currently-disabled textbox placeholder copy invites users to 'Hit NERD IT to play!'
+  - Clicking NERD IT initiates the game
+  - FEEDBACK button is disabled until post-game 
 
-## Home Page Features
-
-- The Home page consists of two responsive elements:
-  - ***Left [responsive: top]*** comprises of an 'About' heading above text on dark-tinted panel, containing brief information about RJW, encouraging getting in touch and thanking for visiting. Valuable to user relations as it conveys pertinent information in a friendly, approachable manner
-  - ***Right [responsive: bottom]*** a paused and muted time-lapse video of RJW's digital art process for the 'Dizzy' illustration. Valuable to users as it provides an insight into RJW's methods and artistic process. 
-    - In the interest of good UXD, THE VIDEO DOES NOT AUTOPLAY until user-invoked, looping thereafter until stopped 
-
-![Home Page Copy Panel](/readme_media/rjwi_screens_site_features/rjwi_home_copy_panel.png) ![Home Page Time-lapse User-Invoked Video Panel](readme_media/rjwi_screens_site_features/rjwi_home_video_panel.png)
-
+![Start Panel](readme_media/site_screens/pp02-01_start_crop.png) 
 
 ## Game Panel Features
 
-  - The 
+  - The game panel screen displays a random icon from the master array
+  - User info text appears below the screen informing the user which round they are playing out of 5
+  - Textbox is activated, placeholder text asks them to type their answer
+  - Button functions change to SUBMIT and PASS/NEXT, allowing users to skip the hard ones
 
-![Game panel](readme_media)
+![Game Panel](readme_media/site_screens/pp02-02_game_crop_1-5.png)
+
+  - After answer submit an alert informs the user if they were correct or incorrect
+    - Incorrect alert panel informs the user of the correct answer
+  - After alert dismissed another random icon is displayed
+  - Each game consists of 5 unique logos chosen randomly from a pool of 15
+  - After 5 rounds the game ends and the score panel is displayed
+
+![Game Panel Correct Alert](readme_media/site_screens/pp02-02_game_crop_1-5_correct.png)
+![Game Panel Incorrect Alert](readme_media/site_screens/pp02-02_game_crop_2-5_wrong.png)
 
 ## Score Panel Features
 
-  - The 
+  - The score panel screen content congratulates the user and returns their score out of 5
+  - Subheader copy is reverted back to default
+  - Textbox placeholder copy thanks users for playing and asks if they want to try again
+  - Button functions change to PLAY AGAIN and FEEDBACK (now active)
 
-![Score panel](readme_media)
+![Score Panel](readme_media/site_screens/pp02-03_score_crop.png)
 
 ## Feedback Panel Features
 
-  - The
+  - The feedback panel screen consists of a 'Feedback Appreciated!' header and copy encouraging users to get in touch
+  - A simple `<form>` element captures user name, email address & message (all required fields)
+  - Textbox placeholder copy thanks users for their feedback
+  - Button functions change to PLAY AGAIN and FEEDBACK (disabled)
 
-![Feedback Panel](readme_media)
+![Feedback Panel](readme_media/site_screens/pp02-04_fback_crop.png)
 
-![Feedback Form Validation](readme_media)
+![Feedback Form Validation](readme_media/site_screens/pp02-04_fback_formdump_crop.png)
 
 ## *Features Left to Implement*
 
@@ -274,19 +288,25 @@ Managed within **GitHub** and **Gitpod** via regular commits pushed to GitHub re
 - JavaScript
   - No errors were returned when passing through the [JSHint validator](https://jshint.com/)
 
-![JSHint JS](readme_media)
+![JSHint JS](readme_media/check_screens/pp02_check_jshint.png)
 
 ## W3C Validator Testing 
 
 - HTML
-  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org)
+  - No errors were returned when passing through the [(X)HTML5 Validator](https://html5.validator.nu/)
 
-![W3C HTML](readme_media)
+![W3C HTML](readme_media/check_screens/pp02_check_nu_html5.png)
+
+- HTML
+  - 3 errors were returned when passing through the official [W3C validator](https://validator.w3.org)
+    - These relate to the outdated convention of only *ever* using one `<main>` tag
+
+![W3C HTML](readme_media/check_screens/pp02_check_w3_html.png)
 
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org)
 
-![W3C CSS](readme_media)
+![W3C CSS](readme_media/check_screens/pp02_check_w3_css.png)
 
 **Google Developer Tools**
 
@@ -297,13 +317,13 @@ Managed within **GitHub** and **Gitpod** via regular commits pushed to GitHub re
 
 In order to make sure that RJW Illustration was responsive to all device sizes, I used [amiresponsive](http://ami.responsivedesign.is/)
 
+![amiresponsive](readme_media/check_screens/pp02_check_amiresponsive.png)
+
 **WebPageTest**
 
 - I used [WebPageTest](https://www.webpagetest.org/) set to London/Chrome as a final test for **nerdOmeter**.
 
-    - Both Gallery pages were initally flagged for uncompressed images, which resulted in a second image overhaul, where I re-optimised, replaced and re-linked all .jpeg images with smaller fresh versions!
-
-![WebPageTest Main](readme_media)
+![WebPageTest Main](readme_media/check_screens/pp02_check_webpagetest.png)
 
 
 ## MANUAL TESTING
@@ -331,39 +351,68 @@ In addition to my own testing a link to the project was shared to family & frien
 
 | TEST | OUTCOME | PASS/FAIL |
 |---|---|:---:|
-| Header & Footer | Ensure all header, footer & nav elements behave as expected: Active/Hover states; | PASS |
+| Header & Footer | Ensure all header, footer & button elements behave as expected: Active/Hover states; Modal | PASS |
 |  | Ensure all styled responsive behaviour rules are met as expected | PASS |
-|  | Ensure social media links behave as expected and open in new tabs | PASS |
+|  | Ensure modal link behave as expected and display correct info | PASS |
 | Background Video | Ensure appropriate behaviour across-site: loads & plays; response scaling; | PASS |
+| Inputs | Ensure button functions perform as expected | PASS / N-A |
+| Responsive | Ensure responsive behaviour rules are met as expected | PASS |
 
-![Lighthouse Main](readme_media)
+![Lighthouse Main](readme_media/check_screens/pp02_check_lighthouse.png)
 
 **Game panel**
 
 | TEST | OUTCOME | PASS/FAIL |
 |---|---|:---:|
-| Video | Ensure expected behaviour: autoplay disabled, muted, loop enabled, plays on demand | PASS |
+| Sub | Ensure dynamic subheader copy is correct | PASS |
+| Image | Ensure expected behaviour: unique; random; displayed correctly | ~~BUG!~~ PASS |
+| Gameplay | Ensure game loops and features work as expected: | BUG! |
+| Gameplay | Ensure game answer checking works as expected: letter case matching; answers are correct! | PASS |
+| Gameplay | Ensure game score tracking works as expected: logs correct / incorrect | PASS | 
+| Inputs | Ensure button functions perform as expected | PASS |
+| Inputs | Ensure Enter-as-SUBMIT function performs as expected: | BUG! |
 | Responsive | Ensure responsive behaviour rules are met as expected | PASS |
 
 **Score panel**
 
 | TEST | OUTCOME | PASS/FAIL |
 |---|---|:---:|
-| Gallery Covers | Ensure expected behaviour: Hover state | PASS |
+| Sub | Ensure dynamic subheader copy is correct | PASS |
+| Score | Ensure expected behaviour: correct value returned | PASS |
+| Inputs | Ensure button functions perform as expected | BUG! / PASS |
 | Responsive | Ensure responsive behaviour rules are met as expected | PASS |
 
 **Feedback panel**
 
 | TEST | OUTCOME | PASS/FAIL |
 |---|---|:---:|
-| Social media links | Ensure social media links behave as expected and open in new tabs | PASS |
-| Responsive | Ensure responsive behaviour rules are met as expected | PASS |
 | Form element | Ensure expected behaviour: Validation; confirmation | PASS |
+| Inputs | Ensure button functions perform as expected | BUG! / N-A |
+| Responsive | Ensure responsive behaviour rules are met as expected | PASS |
 
 
 ## BUGS and FIXES
 
-### **Bug:** 
+### **Bug: Duplicate images** in some gameplay runs
+  
+  • *Issue:* Duplicate icons appearing during some games
+  • *Fix:* Identified and rectified coding error in JavaScript RNG function
+
+### **Bug: Enter-as-SUBMIT** causes game glitch if used during gameplay runs
+  
+  • *Issue:* Pressing Enter rather than submit to post answers causes the game to play itself and complete the remaining rounds with wrong answers. This feature has previously been working as expected but now glitches the game. Really frustrating! 
+  • *Fix:* Pending... but considering disabling the feature in a worst-case scenario!
+
+### **Bug: Play Again button** fails to reset game panel correctly for another run
+  
+  • *Issue:* Clicking Play Again on the score or feedback panels takes user back to the game panel but doesn't reset and reload the game again properly; the icon & answer from the previous game still populates the screen & textbox; round-count is still set at 5/5; unable to interact with user inputs. 
+  • *Fix:* Pending...
+
+### **Bug: **
+  
+  • *Issue:* 
+  • *Fix:* 
+
 
 # Deployment
 
