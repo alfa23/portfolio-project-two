@@ -322,6 +322,8 @@ During the course of this project I have utilised the following technologies:
   - User info text appears below the screen informing the user which round they are playing out of 5
   
   - Textbox is activated, placeholder text asks the user to type their answer
+    
+    ***REFINED FOR RESUBMISSION*** In response to initial Assessment Team feedback, this resubmission iteration includes improvements to text input fields; those utilised solely for user messaging are now `readonly` and the ***user answer input*** now incorporates *defensive design* by *disallowing empty submissions*.
   
   - Button functions change to SUBMIT and PASS/NEXT, allowing users to skip the hard ones
 
@@ -330,8 +332,11 @@ During the course of this project I have utilised the following technologies:
 
   - After answer submit an alert informs the user if they were correct or incorrect
     - Incorrect alert panel informs the user of the correct answer
+    
+    ***REFINED FOR RESUBMISSION*** In response to initial Assessment Team feedback, this resubmission iteration includes improvement to standard JavaScript alerts using the **SweetAlert** js modal package. 
+    - Sourced from: https://github.com/t4t5/sweetalert
 
-  - After alert dismissed another random icon is displayed
+  - After ~~alert~~ **SweetAlert** modal is dismissed another random icon is displayed
 
   - Each game consists of 5 unique logos chosen randomly from a pool of 15
 
@@ -349,8 +354,15 @@ During the course of this project I have utilised the following technologies:
   - Subheader copy is reverted back to default
 
   - Textbox placeholder copy thanks users for playing and asks if they want to try again
-
+    
   - Button functions change to PLAY AGAIN and FEEDBACK (now active)
+
+    ***REFINED FOR RESUBMISSION*** This resubmission iteration includes a contextual response header `h2` element; 
+    - `h2` if *user score* **<=1**: **UNLUCKY!** 
+    - `h2` if *user score* **==2**: **NOT BAD!** 
+    - `h2` if *user score* **==3**: **GOOD GOING!** 
+    - `h2` if *user score* **==4**: **WELL DONE!** 
+    - `h2` if *user score* **==5**: **TOP MARKS!** 
 
 ![Score Panel](readme_media/site_screens/pp02-03_score_crop.png)
 
@@ -584,4 +596,6 @@ The live link can be found here - https://alfa23.github.io/portfolio-project-two
 • **Page background video** modified code from https://w3collective.com/fullscreen-video-background/
 
 • **Modal box** for footer/image credits learnt, borrowed and adapted css-grid code from: https://www.w3schools.com/howto/howto_css_modals.asp 
+
+• **SweetAlert** In response to initial Assessment Team feedback, this resubmission iteration includes improvement to standard js alerts using the JavaScript modal package from: https://github.com/t4t5/sweetalert
 
