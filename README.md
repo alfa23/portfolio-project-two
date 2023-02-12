@@ -296,6 +296,8 @@ During the course of this project I have utilised the following technologies:
 **Site-wide Footer** 
 
   - The footer section incorporates a JavaScript-controlled modal link containing image credits for all utilised images
+
+    ***REMEDIED FOR RESUBMISSION*** In response to initial Assessment Team feedback, this resubmission iteration includes improvement to the external link to *image sources used;* the original **Google Sheets** `HTML` export `nerdometer.html` has been deleted and replaced with a **Google Sheets** *PDF* containing the same source information - without any ugly extra `HTML` to forget to validate!  
   
   ![Site-wide Footer](readme_media/site_screens/pp02_footer.png)
 
