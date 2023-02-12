@@ -50,7 +50,7 @@
 
       <!-- user inputs section with text input & feedback/start buttons -->
       <div class="user-input">
-        <input type="text" placeholder="Hit NERD IT to play!">
+        <input type="text" placeholder="Hit NERD IT to play!" readonly>
         <button data-type="start" class="button start-button">NERD IT</button>
         <button data-type="fback" class="button" disabled>FEEDBACK</button>
       </div>
@@ -66,8 +66,8 @@
       <!-- user inputs section with text input & submit/pass buttons -->
       <div class="user-input">
         <p id="mssg-banner">Question 1 out of 5</p>
-        <input type="text" id="answer-box" placeholder="Type your answer here">
-        <button data-type="submit-answer" class="button" id="submit-answer-button">SUBMIT</button>
+        <input type="text" id="answer-box" placeholder="Type your answer here" required />
+        <button type="submit" data-type="submit-answer" class="button" id="submit-answer-button">SUBMIT</button>
         <button data-type="pass" class="button" id="pass-button">PASS/NEXT</button>
       </div>
     </main>
@@ -77,14 +77,14 @@
       <!-- score screen section -->
       <div id="score-screen">
         <br>
-        <h2><span>WELL DONE!</span></h2>
+        <h2><span id="response-html">WELL DONE!</span></h2>
         <br>
         <h2><span id="score-html">score inner html</span></h2>
       </div>
 
       <!-- user inputs section with text input & start(PLAY AGAIN)/feedback buttons -->
       <div class="user-input">
-        <input type="text" placeholder="Thanks for playing! Try again?">
+        <input type="text" placeholder="Thanks for playing! Try again?" readonly>
         <button data-type="start" class="button start-button">PLAY AGAIN</button>
         <button data-type="fback" class="button" id="fback-button">FEEDBACK</button>
       </div>
@@ -131,7 +131,7 @@
               Corporation | Ubisoft (US)/Sony Pictures | Universal Pictures Amblin Entertainment | Warner Bros.
             </p>
             <br>
-            <p>For full details including image sources, please see <a href="nerdometer.html" target="_blank">here</a>.
+            <p>For full details including image sources, please see <a href="readme_media/planning_docs/nerdOmeter.pdf" target="_blank">here</a>.
             </p>
           </div>
         </div>

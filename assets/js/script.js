@@ -142,6 +142,10 @@ function checkAnswer() {
     document.getElementById('mssg-banner').innerHTML = `Question ${(questionNumber + 1)} out of 5`;
     setQuestion();
     document.getElementById('answer-box').value = '';
+  } else {
+    document.getElementById('mssg-banner').innerHTML = `Question 1 out of 5`;
+    setQuestion();
+    document.getElementById('answer-box').value = '';
   }
 }
 
@@ -150,21 +154,45 @@ let score = 0;
 
 function incrementScore() {
   score++;
-  // console.log(score);
 }
 
+// Method to check if last (5th) question has been answered
 function checkGameFinished() {
-  // console.log(questionNumber);
   if (questionNumber == 5) {
+    // Checks final score & updates response-html h2 element
+    if (score <= 1) {
+      document.getElementById('response-html').innerHTML = 'UNLUCKY!';
+    }
+    if (score == 2) {
+      document.getElementById('response-html').innerHTML = 'NOT BAD!';
+    }
+    if (score == 3) {
+      document.getElementById('response-html').innerHTML = 'GOOD GOING!';
+    }
+    if (score == 4) {
+      document.getElementById('response-html').innerHTML = 'WELL DONE!';
+    }
+    if (score == 5) {
+      document.getElementById('response-html').innerHTML = 'TOP MARKS!';
+    }
+    
     document.getElementById('score-html').innerHTML = `You got a score of<br>${score}`;
     document.getElementById('game-panel').style.display = 'none';
     document.getElementById('score-panel').style.display = 'block';
     // Returns header subhead element copy to original copy
     document.getElementById('subheader').innerHTML = 'The ULTIMATE nerd test!';
-    return true;
+    startFreshGame();
+    return false;
   } else {
     return false;
   }
+}
+
+// Method to start a fresh game if checkGameFinished = true
+function startFreshGame() {
+  questionNumber = 0;
+  score = 0;
+  main();
 }
 
 // score-panel script
