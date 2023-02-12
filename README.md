@@ -417,13 +417,20 @@ Managed within **GitHub** and **Gitpod** via regular commits pushed to GitHub re
   - 3 errors were returned when passing through the official [W3C validator](https://validator.w3.org)
     - These relate to the outdated convention of only *ever* using one `<main>` tag
 
-![W3C HTML](readme_media/check_screens/pp02_check_w3_html.png)
+![W3C HTML](readme_media/check_screens/pp02_check_w3_html_resub.jpg)
 
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org)
 
-![W3C CSS](readme_media/check_screens/pp02_check_w3_css.png)
+![W3C CSS](readme_media/check_screens/pp02_check_w3_css_resub.jpg)
 
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
 
 **Google Developer Tools**
 
@@ -488,7 +495,7 @@ In addition to my own testing a link to the project was shared to family & frien
 |---|---|:---:|
 | Sub | Ensure dynamic subheader copy is correct | PASS |
 | Image | Ensure expected behaviour: unique; random; displayed correctly | ~~BUG!~~ PASS |
-| Gameplay | Ensure game loops and features work as expected: | BUG! |
+| Gameplay | Ensure game loops and features work as expected: | ~~BUG!~~ PASS |
 | Gameplay | Ensure game answer checking works as expected: letter case matching; answers are correct! | PASS |
 | Gameplay | Ensure game score tracking works as expected: logs correct / incorrect | PASS | 
 | Inputs | Ensure button functions perform as expected | PASS |
@@ -502,7 +509,7 @@ In addition to my own testing a link to the project was shared to family & frien
 |---|---|:---:|
 | Sub | Ensure dynamic subheader copy is correct | PASS |
 | Score | Ensure expected behaviour: correct value returned | PASS |
-| Inputs | Ensure button functions perform as expected [x2] | BUG! / PASS |
+| Inputs | Ensure button functions perform as expected [x2] | ~~BUG!~~ PASS / PASS |
 | Responsive | Ensure responsive behaviour rules are met as expected | PASS |
 
 
@@ -511,7 +518,7 @@ In addition to my own testing a link to the project was shared to family & frien
 | TEST | OUTCOME | PASS/FAIL |
 |---|---|:---:|
 | Form element | Ensure expected behaviour: Validation; confirmation | PASS |
-| Inputs | Ensure button functions perform as expected [x2] | BUG! / N-A |
+| Inputs | Ensure button functions perform as expected [x2] | ~~BUG!~~ PASS / N-A |
 | Responsive | Ensure responsive behaviour rules are met as expected | PASS |
 
 
@@ -532,15 +539,15 @@ In addition to my own testing a link to the project was shared to family & frien
   • *Fixed:* Fixed by repositioning event listener code block within the function.
 
 
-### **Bug: Play Again button** fails to reset game panel correctly for another run
+~~### **Bug: Play Again button** fails to reset game panel correctly for another run~~
   
   • *Issue:* Clicking Play Again on the score or feedback panels takes user back to the game panel but doesn't reset and reload the game again properly; the icon & answer from the previous game still populates the screen & textbox; round-count is still set at 5/5; unable to interact with user inputs. 
   
-  • *Fix:* Pending... managed to get user input but it throws an error.
+  • *Fixed:* After much searching and head-scratching I realised there wasn't a function to initiate a fresh instance of the game - d'oh! A simple addition of a few lines of `startFreshGame` function code ***squashed this bug!***
 
   ![Annoying bug](readme_media/check_screens/pp02_annoying_bug.png)
 
-  Note to assessors: Unfortunately - and much to my frustration - I was unable to squash this bug before deadline, which is really annoying as it would have been MVP. My apologies.
+  ~~Note to assessors: Unfortunately - and much to my frustration - I was unable to squash this bug before deadline, which is really annoying as it would have been MVP. My apologies.~~ ***REMEDIED FOR RESUBMISSION***
 
 
 # Deployment

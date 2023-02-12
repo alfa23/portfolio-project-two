@@ -10,7 +10,7 @@
   <meta name="keywords" content="HTML, CSS, JavaScript, nerds">
   <meta name="author" content="PaW/alfa23">
   <!-- favicon -->
-  <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+  <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'>
   <link rel="stylesheet" href="assets/css/style.css">
   <title>nerdOmeter</title>
 </head>
@@ -27,7 +27,7 @@
 
     <!-- header section with dynamic subheader -->
     <header>
-      <h1 id="main-header">nerdOmeter</h1>
+      <a href="index.html"><h1 id="main-header">nerdOmeter</h1></a>
       <h2 id="subheader">The ULTIMATE nerd test!</h2>
     </header>
 
@@ -66,7 +66,7 @@
       <!-- user inputs section with text input & submit/pass buttons -->
       <div class="user-input">
         <p id="mssg-banner">Question 1 out of 5</p>
-        <input type="text" id="answer-box" placeholder="Type your answer here" required />
+        <input type="text" id="answer-box" placeholder="Type your answer here" required>
         <button type="submit" data-type="submit-answer" class="button" id="submit-answer-button">SUBMIT</button>
         <button data-type="pass" class="button" id="pass-button">PASS/NEXT</button>
       </div>
@@ -141,6 +141,8 @@
 
   <!-- javascript call after page html load -->
   <script src="assets/js/script.js"></script>
+  <!-- Import SweetAlert js modal package sourced from https://github.com/t4t5/sweetalert -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>

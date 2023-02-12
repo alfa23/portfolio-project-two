@@ -131,10 +131,10 @@ function checkAnswer() {
   let isCorrect = userAnswer.toLowerCase() === correctAnswer.toLowerCase();
 
   if (isCorrect) {
-    alert('Nerdtastic! You got it right! :D');
+    swal("Nerd-tastic!", `${correctAnswer} was the right answer!`, "success");
     incrementScore();
   } else {
-    alert(`Nerdmare! The correct answer was ${correctAnswer}!`);
+    swal("Nerd-mare!", `The correct answer was ${correctAnswer}!`, "info");
   }
   questionNumber++;
   let gameIsFinished = checkGameFinished();
@@ -159,7 +159,7 @@ function incrementScore() {
 // Method to check if last (5th) question has been answered
 function checkGameFinished() {
   if (questionNumber == 5) {
-    // Checks final score & updates response-html h2 element
+    // Checks final score & contextually updates response-html h2 element
     if (score <= 1) {
       document.getElementById('response-html').innerHTML = 'UNLUCKY!';
     }
