@@ -404,7 +404,7 @@ Managed within **GitHub** and **Gitpod** via regular commits pushed to GitHub re
 - JavaScript
   - No errors were returned when passing through the [JSHint validator](https://jshint.com/)
 
-![JSHint JS](readme_media/check_screens/pp02_check_jshint.png)
+![JSHint JS](readme_media/check_screens/pp02_check_jshint_resub.jpg)
 
 ## W3C Validator Testing 
 
@@ -414,12 +414,18 @@ Managed within **GitHub** and **Gitpod** via regular commits pushed to GitHub re
 ![W3C HTML](readme_media/check_screens/pp02_check_nu_html5.png)
 
 - HTML
-  - 3 errors were returned when passing through the official [W3C validator](https://validator.w3.org)
+  - *3 errors* were returned when passing through the official [W3C validator](https://validator.w3.org)
     - These relate to the outdated convention of only *ever* using one `<main>` tag
+
+![W3C HTML](readme_media/check_screens/pp02_check_w3_html.png)
+
+- HTML - ***REMEDIED FOR RESUBMISSION***
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org)
+    - ***REMEDIED FOR RESUBMISSION*** by leaving one `<main>` tag and changing remaining to `div`s
 
 ![W3C HTML](readme_media/check_screens/pp02_check_w3_html_resub.jpg)
 
-- CSS
+- CSS - ***REMEDIED FOR RESUBMISSION***
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org)
 
 ![W3C CSS](readme_media/check_screens/pp02_check_w3_css_resub.jpg)
@@ -539,7 +545,7 @@ In addition to my own testing a link to the project was shared to family & frien
   • *Fixed:* Fixed by repositioning event listener code block within the function.
 
 
-~~### **Bug: Play Again button** fails to reset game panel correctly for another run~~
+~~### **Bug: Play Again button** fails to reset game panel correctly for another run~~ ***REMEDIED FOR RESUBMISSION***
   
   • *Issue:* Clicking Play Again on the score or feedback panels takes user back to the game panel but doesn't reset and reload the game again properly; the icon & answer from the previous game still populates the screen & textbox; round-count is still set at 5/5; unable to interact with user inputs. 
   
